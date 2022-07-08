@@ -4,7 +4,7 @@ from user.models import User
 
 class jobs_status(models.Model):
     post = models.ForeignKey('JobPost',on_delete=models.CASCADE)
-    user = models.ManyToManyField(User)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     
 
 
